@@ -3,9 +3,18 @@
   <%= link_to logo, root_path %>
   <nav class="round">
     <ul>
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Help", help_path %></li>
-      <li><%= link_to "Sign in", new_user_session_url %></li>
+      <li><%= link_to "Home", root_path %></li> |
+      <li><%= link_to "Help", help_path %></li> |
+      <li><div id="user_nav">
+            <% if user_signed_in? %>
+              Signed in as <%= link_to current_user.email, edit_user_registration_url %>. Not you?
+              <%= link_to "Sign out", destroy_user_session_path %>
+            <% else %>
+              <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+            <% end %>
+          </div>
+      </li>
     </ul>
   </nav>
 </header>
+
