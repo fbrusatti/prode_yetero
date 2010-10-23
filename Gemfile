@@ -10,6 +10,8 @@ gem 'mysql2'
 gem 'jquery-rails'
 
 gem 'devise', '1.1.rc0'
+gem "cancan"
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
