@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
     roles.map(&:to_sym)
   end
 
-  def role?
+  def role?(role)
     roles.include? role.to_s
   end
   # /ROLES ---------------------------------------------------------------------

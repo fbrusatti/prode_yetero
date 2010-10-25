@@ -11,14 +11,16 @@
   <p><%= f.label :password_confirmation %></p>
   <p><%= f.password_field :password_confirmation %></p>
 
-  <p><%#= form.label :roles_mask, "Roles" %></p>
-  <p>
-    <% User::ROLES.each do |role| %>
-      <%= check_box_tag "user[roles][]", role, @user.roles.include?(role) %>
-      <%= h role.humanize %>      
-    <% end %>
-    <%= hidden_field_tag "user[roles][]" %>
-  </p>
+  <% if can? :manage, @user %>
+    <p><%#= form.label :roles_mask, "Roles" %></p>
+    <p>
+      <% User::ROLES.each do |role| %>
+        <%= check_box_tag "user[roles][]", role, @user.roles.include?(role) %>
+        <%= h role.humanize %>      
+      <% end %>
+      <%= hidden_field_tag "user[roles][]" %>
+    </p>
+  <% end %> 
 
   <p><%= f.submit "Sign up" %></p>
 <% end %>

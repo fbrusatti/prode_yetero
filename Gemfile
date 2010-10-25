@@ -5,6 +5,8 @@ gem 'rails', '3.0.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'haml'
+
 gem 'mysql2'
 
 gem 'jquery-rails'
@@ -12,7 +14,7 @@ gem 'jquery-rails'
 gem 'devise', '1.1.rc0'
 gem "cancan"
 
-
+gem "nifty-generators"
 # Use unicorn as the web server
 # gem 'unicorn'
 

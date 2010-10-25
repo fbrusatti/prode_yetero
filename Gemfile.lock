@@ -36,6 +36,7 @@ GEM
       warden (~> 0.10.3)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    haml (3.0.22)
     i18n (0.4.1)
     jquery-rails (0.2.4)
       rails (~> 3.0)
@@ -45,6 +46,7 @@ GEM
       treetop (>= 1.4.5)
     mime-types (1.16)
     mysql2 (0.2.4)
+    nifty-generators (0.4.2)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -78,6 +80,8 @@ PLATFORMS
 DEPENDENCIES
   cancan
   devise (= 1.1.rc0)
+  haml
   jquery-rails
   mysql2
+  nifty-generators
   rails (= 3.0.1)
