@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  fixture_id: 1
+  from: 2010-10-27
+  to: 2010-10-27
+
+two:
+  name: MyString
+  fixture_id: 1
+  from: 2010-10-27
+  to: 2010-10-27
+
+# == Schema Information
+#
+# Table name: weeks
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(255)
+#  fixture_id :integer(4)
+#  from       :date
+#  to         :date
+#  created_at :datetime
+#  updated_at :datetime
+#
+

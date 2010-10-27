@@ -5,6 +5,8 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.1'
 gem 'mysql2'
 
+gem 'annotate'
+
 gem 'jquery-rails'
 gem 'haml'
 gem "nifty-generators"
@@ -35,3 +37,4 @@ gem "cancan"
 # group :development, :test do
 #   gem 'webrat'
 # end
+

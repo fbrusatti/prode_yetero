@@ -10,7 +10,43 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101023141430) do
+ActiveRecord::Schema.define(:version => 20101027203259) do
+
+  create_table "fixtures", :force => true do |t|
+    t.integer  "league_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "leagues", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "matches", :force => true do |t|
+    t.integer  "week_id"
+    t.integer  "visitor_id"
+    t.integer  "local_id"
+    t.integer  "visitor_score", :default => 0
+    t.integer  "local_score",   :default => 0
+    t.datetime "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "standings", :force => true do |t|
+    t.integer  "league_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "teams", :force => true do |t|
+    t.string   "name"
+    t.integer  "match_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -30,10 +66,20 @@ ActiveRecord::Schema.define(:version => 20101023141430) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "roles_mask"
+    t.string   "username"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "weeks", :force => true do |t|
+    t.string   "name"
+    t.integer  "fixture_id"
+    t.date     "from"
+    t.date     "to"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

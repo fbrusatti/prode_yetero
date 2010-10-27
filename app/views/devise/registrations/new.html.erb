@@ -1,12 +1,14 @@
 <h2>Sign up</h2>
 
 <%= simple_form_for resource_name, :url => registration_path(resource_name) do |f| %>
-  <%= f.error_messages %>
+  <%= f.error :username %>
+
+  <%= f.input :username, :input_html => {:size => 30} %>
   <%= f.input :email, :input_html => {:size => 30} %>
   <%= f.input :password %>
   <%= f.input :password_confirmation %>
 
-  <%# if can? :manage, @user %>
+  <% if can? :manage, @user %>
     <p>
       <% User::ROLES.each do |role| %>
         <%= check_box_tag "user[roles][]", role, @user.roles.include?(role) %>
@@ -14,7 +16,7 @@
       <% end %>
       <%= hidden_field_tag "user[roles][]" %>
     </p>
-  <%# end %>
+  <% end %>
 
   <%= f.button :submit, 'Sign up' %>
 <% end %> 

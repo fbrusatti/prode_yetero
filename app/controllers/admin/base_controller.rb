@@ -1,6 +1,7 @@
 class Admin::BaseController < ApplicationController
-#  before_filter :admin_required, :setting_variable
-#  filter_parameter_logging :password
+  before_filter :authenticate_user!
+  before_filter :admin_required
+
 #  helper_method :current_user
   layout 'admin'
 
@@ -20,11 +21,11 @@ class Admin::BaseController < ApplicationController
 #      @current_user = current_user_session && current_user_session.record
 #    end
 
-#     def admin_required
-#       unless current_user && current_user.admin?
-#         flash[:error] = "Sorry, you don't have access to that."
-#         redirect_to root_url and return false
-#       end
-#     end
+     def admin_required
+       unless current_user && current_user.role?(:admin)
+         flash[:error] = "Sorry, you don't have access to that."
+         redirect_to root_url and return false
+       end
+     end
 end
 

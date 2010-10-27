@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  match_id: 1
+
+two:
+  match_id: 1
+
+# == Schema Information
+#
+# Table name: teams
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(255)
+#  match_id   :integer(4)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
