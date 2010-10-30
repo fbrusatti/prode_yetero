@@ -1,15 +1,36 @@
 %header
-  %nav{:class => "round"}
+  %div{:id => 'user_nav'}
+    - if user_signed_in?
+      =# "Signed in as #{link_to(current_user.email, edit_user_registration_path())}. Not you? "
+      ="Signed is as"
+      = link_to current_user.email, edit_user_registration_url
+      =". Not you?"
+      = link_to "Sign out", destroy_user_session_path
+    - else
+      ="#{link_to "Sign up", new_user_registration_path} or #{link_to "sign in", new_user_session_path}"
+
+  %nav
     %ul
-      %li= link_to "Regular Site", root_path
+      %li= link_to "Leages", admin_leagues_path()
+
       %li
-        %div{:id => 'user_nav'}
-          - if user_signed_in?
-            =# "Signed in as #{link_to current_user.email, edit_user_registration_path}. Not you? "
-            'Signed is as'
-            = link_to current_user.email, edit_user_registration_url
-            '. Not you?'
-            = link_to "Sign out", destroy_user_session_path
-          - else
-            ="#{link_to "Sign up", new_user_registration_path} or #{link_to "sign in", new_user_session_path}"  
+        = link_to 'LINK 0', root_url
+
+      %li
+        = link_to 'LINK 1', root_url
+        %ul
+          %li
+            = link_to '1.1', root_url
+            %ul
+              %li
+                = link_to '1.1.1', root_url
+            = link_to '1.2', root_url
+            = link_to '1.3', root_url
+
+      %li
+        = link_to 'LINK 2', root_url
+
+%div{:style => "clear:both;" }
+
+
 

@@ -1,0 +1,139 @@
+/******************************************************************************/
+/*                               MENU                                         */
+/******************************************************************************/
+#user_nav{
+  float: right;
+}
+
+nav {
+    height:41px;
+    background:url(images/main-bg.png) repeat-x;
+    margin-left: -8px;
+    margin-right: -8px;
+    clear: both;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: left;
+}
+nav ul.menu {
+    padding-left: 30px;
+}
+
+nav li {
+    position: relative;
+    z-index: 9;
+    margin: 0;
+    padding: 0 5px 0 0;
+    display: block;
+    float: left;
+}
+nav li:hover>ul {
+    left: -2px;
+}
+
+nav a {
+    position: relative;
+    z-index: 10;
+    height: 41px;
+    display: block;
+    float: left;
+    line-height: 41px;
+    text-decoration: none;
+    font: bolder 12px Trebuchet MS;
+}
+nav a:hover, nav a:hover span { color: #fff; }
+nav li.current a {}
+
+nav span {
+    display: block;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 95% 0;
+}
+nav ul ul a.parent span {
+    background-position:95% 8px;
+    background-image: url(images/item-pointer.gif);
+}
+nav ul ul a.parent:hover span {
+    background-image: url(images/item-pointer-mover.gif);
+}
+/* menu::level1 */
+nav a {
+    padding: 0 10px 0 10px;
+    line-height: 30px;
+    color: #e5e5e5;
+}
+nav span {
+    margin-top: 5px;
+}/**@replace#1*/
+nav li { background: url(images/main-delimiter.png) 98% 4px no-repeat; }
+nav li.last { background: none; }
+
+/* menu::level2 */
+nav ul ul li { background: none; border-bottom: 1px solid #666; }
+nav ul ul {
+    position: absolute;
+    top: 38px;
+    left: -999em;
+    width: 163px;
+    padding: 5px 0 0 0;
+    background: #0B243B; /* bg-color of menu overlay*/
+    margin-top:1px;
+}
+nav ul ul a {
+    padding: 0 0 0 15px;
+    height: auto;
+    float: none;
+    display: block;
+    line-height: 24px;
+    color: rgb(169,169,169);
+}
+nav ul ul span {
+    margin-top: 0;
+    padding-right: 15px;
+    _padding-right: 20px;
+    color: rgb(169,169,169);
+}
+nav ul ul a:hover span {
+    color: #fff;
+}
+nav ul ul li.last { background: none; }
+nav ul ul li {
+    width: 100%;
+}
+/* menu::level3 */
+nav ul ul ul {
+    padding: 0;
+    margin: -38px 0 0 163px !important;
+    margin-left:172px;
+}
+
+/* colors */
+nav ul ul ul { 
+    background: #040404; /* sub sub menu #0B243B*/
+
+}
+nav ul ul ul ul { background: rgb(38,38,38); }
+nav ul ul ul ul { background: rgb(35,35,35); }
+
+/* lava lamp */
+nav li.back {
+    background: url(images/lava.png) no-repeat right -44px !important;
+    background-image: url(images/lava.gif);
+    width: 13px;
+    height: 44px;
+    z-index: 8;
+    position: absolute;
+    margin: -1px 0 0 -5px;
+}
+nav li.back .left {
+    background: url(images/lava.png) no-repeat top left !important;
+    background-image: url(images/lava.gif);
+    height: 44px;
+    margin-right: 8px;
+}
+

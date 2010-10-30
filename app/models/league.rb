@@ -1,6 +1,12 @@
 class League < ActiveRecord::Base
   has_one :fixture
   has_one :standing
+
+  belongs_to :owner, :class_name => 'User'
+
+  def to_s
+    name
+  end
 end
 
 # == Schema Information

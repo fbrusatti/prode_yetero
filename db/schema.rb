@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101027203259) do
+ActiveRecord::Schema.define(:version => 20101030124618) do
 
   create_table "fixtures", :force => true do |t|
     t.integer  "league_id"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20101027203259) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "owner_id"
   end
 
   create_table "matches", :force => true do |t|

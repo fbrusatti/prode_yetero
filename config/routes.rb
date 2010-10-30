@@ -45,6 +45,10 @@ ProdeYetero::Application.routes.draw do
     match '/admin', :to => 'base#index'
   end
 
+  namespace :admin do
+    resources :leagues
+  end
+
   root :to => "home#index"
 
   match '/contact', :to => 'pages#contact'

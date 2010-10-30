@@ -1,0 +1,40 @@
+- title 'Leagues'
+
+%div{:class => 'container'}
+  .span-6
+    %h5= "Name"
+
+  .span-6
+    %h5= "Owner"
+
+- @leagues.each do |league|
+  = league
+
+/
+  %div{:class => 'container showgrid'}
+    %h1
+      Blueprint Test
+    .span-4
+      %p
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+    .span-8
+      %p
+        span 8
+
+    .span-8.last
+      span 8 last
+
+    .span-6.append-3.last
+      span-6 append-3 last
+
+    %hr
+
+    .span12.border
+      %p
+        span12 border
+
+    .span-12.last
+      %p
+        span-12 last
+

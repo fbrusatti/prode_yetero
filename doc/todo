@@ -1,3 +1,39 @@
+Started POST "/users/sign_in" for 127.0.0.1 at 2010-10-28 15:46:47 -0300
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RJVlXQOv8X19sKf6RqPZZQK9BMjI/05twQUXHaolpqE=", "user"=>{"username"=>"pito", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  User Load (0.1ms)  SELECT `users`.* FROM `users` WHERE (`users`.`username` = 'pito') LIMIT 1
+Completed   in 17ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RJVlXQOv8X19sKf6RqPZZQK9BMjI/05twQUXHaolpqE=", "user"=>{"username"=>"pito", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+WARNING: Can't mass-assign protected attributes: remember_me
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered layouts/_stylesheets.html.erb (1.4ms)
+Rendered layouts/_header.html.erb (2.2ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 88ms (Views: 31.5ms | ActiveRecord: 0.1ms)
+
+--------------------------------------------------------------------------------
+
+Started POST "/users/registration" for 127.0.0.1 at 2010-10-28 15:48:48 -0300
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RJVlXQOv8X19sKf6RqPZZQK9BMjI/05twQUXHaolpqE=", "user"=>{"username"=>"admin", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  SQL (0.1ms)  BEGIN
+  SQL (0.1ms)  ROLLBACK
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered layouts/_stylesheets.html.erb (1.1ms)
+Rendered layouts/_header.html.erb (2.1ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Rendered devise/registrations/new.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 77ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+--------------------------------------------------------------------------------
+
+
+
+
+
+
 lt = Team.new(:name => "local")
 vt = Team.new(:name => "visitor")
 m = Match.new
