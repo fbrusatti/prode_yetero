@@ -8,7 +8,10 @@
     %h5= "Owner"
 
 - @leagues.each do |league|
-  = league
+  .span-6
+    = league
+  .span-6
+    = league.owner.username
 
 /
   %div{:class => 'container showgrid'}

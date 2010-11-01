@@ -1,4 +1,5 @@
 %header
+
   %div{:id => 'user_nav'}
     - if user_signed_in?
       =# "Signed in as #{link_to(current_user.email, edit_user_registration_path())}. Not you? "
@@ -8,7 +9,7 @@
       = link_to "Sign out", destroy_user_session_path
     - else
       ="#{link_to "Sign up", new_user_registration_path} or #{link_to "sign in", new_user_session_path}"
-
+/
   %nav
     %ul
       %li= link_to "Leages", admin_leagues_path()
@@ -33,4 +34,23 @@
 %div{:style => "clear:both;" }
 
 
+%ul#css3menu.topmenu
+  %li{:class => 'topfirst'}
+    / <li class="topfirst"><a href="#" title="Item 0"><img src="test_files/laboreicon_mini.jpg" alt="Item 0"/>Item 0</a></li>
+    = link_to "Leages", admin_leagues_path()
 
+  %li.topmenu
+    = link_to 'Item 1', root_url
+
+    %ul
+      %li.subfirst
+        = link_to 'Item 1.0', root_url
+      %li
+        = link_to 'Item 1.1', root_url
+      %li
+        = link_to 'Item 1.2', root_url
+
+  %li.toplast
+    = link_to 'Item 2', root_url
+
+%div{:style => "clear:both;" }

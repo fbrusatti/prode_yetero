@@ -18,10 +18,10 @@ a {
   overflow: hidden;
 }
 
-#container {
+#main_container {
   width: 75%;
   margin: 0 auto;
-  background-color: #FFF;
+/*  background-color: #FFF;*/
   padding: 20px 40px;
 /*  border: solid 2px black;*/
   border: solid 2px gray;

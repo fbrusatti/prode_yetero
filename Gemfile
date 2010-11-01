@@ -8,13 +8,14 @@ gem 'mysql2'
 gem 'annotate'
 
 gem 'jquery-rails'
+gem 'compass'
+gem 'fancy-buttons'
 gem 'haml'
 gem "nifty-generators"
 gem 'simple_form'
 
 gem 'devise', '1.1.rc0'
 gem "cancan"
-
 
 # Use unicorn as the web server
 # gem 'unicorn'
