@@ -1,30 +1,40 @@
 - title 'Welcome to admin site'
 
-%h1
-  Fancy Buttons
 
-%div
-  <button>Fancy!</button>
+%button
+  simple button
 
-  %button
-    Fancy2!
+%button.green
+  simple green button 
 
-%p
-  Admin Site
+= link_to "Test", root_url(), {:class => 'button'}
 
-%div{:style=> "padding: 20px;"}
-<button class="matte-blue">Back to Products</button>
+= link_to "Test 2", root_url(), {:class => 'button custom'}
+
+= link_to "Test 3", root_url(), {:class => 'button mate-blue'}
+
+= link_to "Test 4", root_url(), {:class => 'button arrow'}
+
+
+- link_to(root_url) do
+  %button.red
+    Back to Products
 
 %button.red
   = link_to "Back to Products", root_url
 
 
+= link_to "Back to Products", root_url, {:class => 'button blue-add'}
 
-button { @include fancy-button(#2966a8); }
+%button.green
+  = link_to "Back to Products", root_url
 
-/* Styles all buttons with:
-1. A shiny gradient based on #2966a8 (a nice blue)
-2. Gradient style variations for :hover, :focus, and :active
-3. White text with a darker blue text shadow
-4. A dark blue border.
-*/
+%button.yellow
+  = link_to "Back to Products", root_url
+
+%button.creation-stage
+  = link_to "Back to Products", root_url
+
+%button.gray-del
+  = link_to "Back to Products", root_url
+

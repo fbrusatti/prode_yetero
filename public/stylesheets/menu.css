@@ -3,6 +3,11 @@
 /******************************************************************************/
 #user_nav{
   float: right;
+  padding-right: 10px;
+}
+
+#user_nav a{
+  text-decoration: none;
 }
 
 nav {

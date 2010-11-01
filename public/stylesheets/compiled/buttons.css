@@ -1,9 +1,8 @@
-@import url(page-styles.css);
 /* incase an inverted custom gradient isn't specified */
 /* line 176, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
-.fancy-button-reset-base-class, button, a.button {
+.fancy-button-reset-base-class, a.button, button {
   font-family: "Lucida Grande", Lucida, Arial, sans-serif;
-  background: url('/images/button_bg.png?1288639338') repeat-x bottom left;
+  background: url('/images/button_bg.png?1288641938') repeat-x bottom left;
   margin: 0;
   width: auto;
   overflow: visible;
@@ -14,80 +13,32 @@
   font-weight: bold;
 }
 /* line 165, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
-.fancy-button-reset-base-class::-moz-focus-inner, button::-moz-focus-inner, a.button::-moz-focus-inner {
+.fancy-button-reset-base-class::-moz-focus-inner, a.button::-moz-focus-inner, button::-moz-focus-inner {
   border: none;
   padding: 0;
 }
 /* line 168, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
-.fancy-button-reset-base-class:focus, button:focus, a.button:focus {
+.fancy-button-reset-base-class:focus, a.button:focus, button:focus {
   outline: none;
 }
 
-/* line 4, ../../../app/stylesheets/buttons.scss */
-button {
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-  font-size: 18px;
-  line-height: 1.2em;
-  padding: 0.3em 1em;
-  border-width: 1px;
-  background-color: #444444;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #989898), color-stop(10%, #6a6a6a), color-stop(50%, #3c3c3c), color-stop(50%, #353535), color-stop(100%, #4e4e4e));
-  background-image: -moz-linear-gradient(top, #989898 0%, #6a6a6a 10%, #3c3c3c 50%, #353535 50%, #4e4e4e 100%);
-  background-image: linear-gradient(top, #989898 0%, #6a6a6a 10%, #3c3c3c 50%, #353535 50%, #4e4e4e 100%);
-  border-color: #1e1e1e;
-  text-shadow: #040404 0px 1px 1px;
-  -moz-box-shadow: rgba(255, 255, 255, 0.267) 0 0 0.1em 1px inset;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.267) 0 0 0.1em 1px inset;
-  -o-box-shadow: rgba(255, 255, 255, 0.267) 0 0 0.1em 1px inset;
-  box-shadow: rgba(255, 255, 255, 0.267) 0 0 0.1em 1px inset;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  -o-background-clip: padding-box;
-  -ms-background-clip: padding-box;
-  -khtml-background-clip: padding-box;
-  background-clip: padding-box;
-}
-/* line 116, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
-button, button:visited {
-  color: white;
-}
-/* line 31, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
-button:hover, button:focus {
-  background-color: #3c3c3c;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #919191), color-stop(10%, #636363), color-stop(50%, #353535), color-stop(50%, #2d2d2d), color-stop(100%, #474747));
-  background-image: -moz-linear-gradient(top, #919191 0%, #636363 10%, #353535 50%, #2d2d2d 50%, #474747 100%);
-  background-image: linear-gradient(top, #919191 0%, #636363 10%, #353535 50%, #2d2d2d 50%, #474747 100%);
-  border-color: #161616;
-  text-shadow: black 0px 1px 1px;
-}
-/* line 116, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
-button:hover, button:hover:visited, button:focus, button:focus:visited {
-  color: white;
-}
-/* line 36, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
-button:active {
-  background-color: #353535;
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #353535), color-stop(30%, #3a3a3a), color-stop(50%, #303030), color-stop(50%, #282828), color-stop(100%, #494949));
-  background-image: -moz-linear-gradient(top, #353535 0%, #3a3a3a 30%, #303030 50%, #282828 50%, #494949 100%);
-  background-image: linear-gradient(top, #353535 0%, #3a3a3a 30%, #303030 50%, #282828 50%, #494949 100%);
-  border-color: #0e0e0e;
-  text-shadow: black 0px -1px -1px;
-  -moz-box-shadow: #1e1e1e 0 0.08em 0.1em 1px inset;
-  -webkit-box-shadow: #1e1e1e 0 0.08em 0.1em 1px inset;
-  -o-box-shadow: #1e1e1e 0 0.08em 0.1em 1px inset;
-  box-shadow: #1e1e1e 0 0.08em 0.1em 1px inset;
-}
-/* line 116, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
-button:active, button:active:visited {
-  color: white;
-}
+/* button {@include fancy-button} */
+/* 
+  it's color, font-width, rounded corners, border 
+  button {@include fancy-button(#124c89, 26px, 1em, 4px);}
 
-/* line 23, ../../../app/stylesheets/buttons.scss */
+  fancy-button-size(SIZEpx, ROUNDEDpx, BORDERpx);
+  fancy-button-colors($color, $hover, $active);
+*/
+/*
+  a{
+    float: right;
+    font: white;
+    color: white;
+    font-color: white;
+  }
+*/
+/* line 39, ../../../app/stylesheets/buttons.scss */
 a.button, button {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -117,6 +68,7 @@ a.button, button {
   background-clip: padding-box;
   margin: 0 2px;
   vertical-align: middle;
+  text-decoration: none;
 }
 /* line 116, ../../../../../.rvm/gems/ruby-1.9.2-p0/gems/fancy-buttons-1.0.4/lib/stylesheets/_fancy-buttons.sass */
 a.button, a.button:visited, button, button:visited {
@@ -152,7 +104,7 @@ a.button:active, button:active {
 a.button:active, a.button:active:visited, button:active, button:active:visited {
   color: white;
 }
-/* line 28, ../../../app/stylesheets/buttons.scss */
+/* line 46, ../../../app/stylesheets/buttons.scss */
 a.button.light, button.light {
   background-color: white;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ffffff), color-stop(100%, #cecece));
@@ -205,7 +157,7 @@ a.button.light:active, button.light:active {
 a.button.light:active, a.button.light:active:visited, button.light:active, button.light:active:visited {
   color: #222222;
 }
-/* line 30, ../../../app/stylesheets/buttons.scss */
+/* line 49, ../../../app/stylesheets/buttons.scss */
 a.button.matte-blue, button.matte-blue {
   background-color: #0058b7;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #367fce), color-stop(100%, #1e4b7b));
@@ -258,7 +210,7 @@ a.button.matte-blue:active, button.matte-blue:active {
 a.button.matte-blue:active, a.button.matte-blue:active:visited, button.matte-blue:active, button.matte-blue:active:visited {
   color: white;
 }
-/* line 32, ../../../app/stylesheets/buttons.scss */
+/* line 52, ../../../app/stylesheets/buttons.scss */
 a.button.green, button.green {
   background-color: #3ab700;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #9ee080), color-stop(10%, #66ce36), color-stop(50%, #418721), color-stop(50%, #3b7b1e), color-stop(100%, #4fa428));
@@ -311,7 +263,7 @@ a.button.green:active, button.green:active {
 a.button.green:active, a.button.green:active:visited, button.green:active, button.green:active:visited {
   color: white;
 }
-/* line 34, ../../../app/stylesheets/buttons.scss */
+/* line 55, ../../../app/stylesheets/buttons.scss */
 a.button.blue, button.blue {
   -moz-border-radius: 32px;
   -webkit-border-radius: 32px;
@@ -374,7 +326,7 @@ a.button.blue:active, button.blue:active {
 a.button.blue:active, a.button.blue:active:visited, button.blue:active, button.blue:active:visited {
   color: white;
 }
-/* line 37, ../../../app/stylesheets/buttons.scss */
+/* line 59, ../../../app/stylesheets/buttons.scss */
 a.button.red, button.red {
   background-color: #b70300;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #e08180), color-stop(10%, #ce3836), color-stop(50%, #872321), color-stop(50%, #7b201e), color-stop(100%, #a42a28));
@@ -427,7 +379,7 @@ a.button.red:active, button.red:active {
 a.button.red:active, a.button.red:active:visited, button.red:active, button.red:active:visited {
   color: white;
 }
-/* line 39, ../../../app/stylesheets/buttons.scss */
+/* line 62, ../../../app/stylesheets/buttons.scss */
 a.button.yellow, button.yellow {
   background-color: #e5e600;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #ebeba2), color-stop(10%, #dbdb57), color-stop(50%, #b1b125), color-stop(50%, #a4a423), color-stop(100%, #cece2c));
@@ -480,7 +432,7 @@ a.button.yellow:active, button.yellow:active {
 a.button.yellow:active, a.button.yellow:active:visited, button.yellow:active, button.yellow:active:visited {
   color: white;
 }
-/* line 41, ../../../app/stylesheets/buttons.scss */
+/* line 65, ../../../app/stylesheets/buttons.scss */
 a.button.custom, button.custom {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -545,7 +497,7 @@ a.button.custom:active, button.custom:active {
 a.button.custom:active, a.button.custom:active:visited, button.custom:active, button.custom:active:visited {
   color: white;
 }
-/* line 47, ../../../app/stylesheets/buttons.scss */
+/* line 71, ../../../app/stylesheets/buttons.scss */
 a.button.blue-add, button.blue-add {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -610,7 +562,7 @@ a.button.blue-add:active, button.blue-add:active {
 a.button.blue-add:active, a.button.blue-add:active:visited, button.blue-add:active, button.blue-add:active:visited {
   color: white;
 }
-/* line 53, ../../../app/stylesheets/buttons.scss */
+/* line 77, ../../../app/stylesheets/buttons.scss */
 a.button.gray-del, button.gray-del {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -675,7 +627,7 @@ a.button.gray-del:active, button.gray-del:active {
 a.button.gray-del:active, a.button.gray-del:active:visited, button.gray-del:active, button.gray-del:active:visited {
   color: white;
 }
-/* line 59, ../../../app/stylesheets/buttons.scss */
+/* line 83, ../../../app/stylesheets/buttons.scss */
 a.button.creation-stage, button.creation-stage {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
@@ -740,7 +692,7 @@ a.button.creation-stage:active, button.creation-stage:active {
 a.button.creation-stage:active, a.button.creation-stage:active:visited, button.creation-stage:active, button.creation-stage:active:visited {
   color: white;
 }
-/* line 64, ../../../app/stylesheets/buttons.scss */
+/* line 89, ../../../app/stylesheets/buttons.scss */
 a.button.creation-stage-active, button.creation-stage-active {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -805,7 +757,7 @@ a.button.creation-stage-active:active, button.creation-stage-active:active {
 a.button.creation-stage-active:active, a.button.creation-stage-active:active:visited, button.creation-stage-active:active, button.creation-stage-active:active:visited {
   color: white;
 }
-/* line 70, ../../../app/stylesheets/buttons.scss */
+/* line 95, ../../../app/stylesheets/buttons.scss */
 a.button.heart, button.heart {
   background-color: #c10300;
   background-image: -webkit-gradient(radial, 50% 10%, 0, 50% 10%, 30, color-stop(0%, #e82926), color-stop(100%, #7c0f0d));
@@ -858,7 +810,7 @@ a.button.heart:active, button.heart:active {
 a.button.heart:active, a.button.heart:active:visited, button.heart:active, button.heart:active:visited {
   color: white;
 }
-/* line 72, ../../../app/stylesheets/buttons.scss */
+/* line 98, ../../../app/stylesheets/buttons.scss */
 a.button.arrow, button.arrow {
   -moz-border-radius: 30px;
   -webkit-border-radius: 30px;
@@ -923,7 +875,7 @@ a.button.arrow:active, button.arrow:active {
 a.button.arrow:active, a.button.arrow:active:visited, button.arrow:active, button.arrow:active:visited {
   color: #222222;
 }
-/* line 76, ../../../app/stylesheets/buttons.scss */
+/* line 103, ../../../app/stylesheets/buttons.scss */
 a.button.spade, button.spade {
   background-color: #0058b7;
   background-image: -webkit-gradient(radial, 50% 10%, 0, 50% 10%, 30, color-stop(0%, #367fce), color-stop(100%, #193e66));
