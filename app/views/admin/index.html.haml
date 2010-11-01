@@ -1,4 +1,30 @@
 - title 'Welcome to admin site'
 
+%h1
+  Fancy Buttons
+
+%div
+  <button>Fancy!</button>
+
+  %button
+    Fancy2!
+
 %p
   Admin Site
+
+%div{:style=> "padding: 20px;"}
+<button class="matte-blue">Back to Products</button>
+
+%button.red
+  = link_to "Back to Products", root_url
+
+
+
+button { @include fancy-button(#2966a8); }
+
+/* Styles all buttons with:
+1. A shiny gradient based on #2966a8 (a nice blue)
+2. Gradient style variations for :hover, :focus, and :active
+3. White text with a darker blue text shadow
+4. A dark blue border.
+*/

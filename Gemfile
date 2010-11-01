@@ -8,7 +8,7 @@ gem 'mysql2'
 gem 'annotate'
 
 gem 'jquery-rails'
-gem 'compass'
+gem 'compass', ">= 0.10.2"
 gem 'fancy-buttons'
 gem 'haml'
 gem "nifty-generators"
