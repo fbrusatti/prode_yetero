@@ -25,7 +25,7 @@ a {
 /*  background-color: #FFF;*/
   padding: 20px 40px;
 /*  border: solid 2px black;*/
-  border: solid 2px gray;
+  border: solid 2px blue;
   margin-top: 20px;
   color: #333;
 }
@@ -88,3 +88,23 @@ a {
   border-radius:         10px;
 }
 
+/* Customization of grid of Blueprint*/
+.container .head{
+  color: green;
+  font-size: 18px;
+  font-weight:bold
+}
+
+.container .item{
+  color: blue;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.even{
+  background-color: #eeeeee;
+}
+
+.odd{
+  background-color: #fff;
+}

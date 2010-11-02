@@ -10,6 +10,8 @@
 // Import the non-default scaffolding module.
 @import "blueprint/scaffolding";
 
+@import "blueprint/grid";
+
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
 // @include blueprint
@@ -47,3 +49,4 @@ body.two-col {
     $content-columns: ceil(2 * $blueprint-grid-columns / 3);
     // true means it's the last column in the row
     @include column($content-columns, true); } }
+

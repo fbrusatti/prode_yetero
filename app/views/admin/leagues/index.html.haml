@@ -2,16 +2,26 @@
 
 %div{:class => 'container'}
   .span-6
-    %h5= "Name"
+    %h2.head= "Name"
+  .span-6
+    %h2.head= "Owner"
 
-  .span-6
-    %h5= "Owner"
+  %hr/
 
-- @leagues.each do |league|
-  .span-6
-    = league
-  .span-6
-    = league.owner.username
+  - @leagues.each do |league|
+    %div{:class => cycle('even', 'odd')} 
+      .span-6.item
+        = league
+
+      .span-6.item.last
+        = league.owner.username
+
+      .clear
+
+%div{:style=> "padding: 20px;"}
+  = link_to new_admin_league_path, :method => :post do
+    <button class="matte-blue">Create New League</button>
+
 
 /
   %div{:class => 'container showgrid'}
