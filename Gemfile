@@ -17,6 +17,8 @@ gem 'simple_form'
 gem 'devise', '1.1.rc0'
 gem "cancan"
 
+gem "transitions", :require => ["transitions", "active_record/transitions"]
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

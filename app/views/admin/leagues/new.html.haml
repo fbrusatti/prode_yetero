@@ -1,11 +1,8 @@
 - title 'New League'
 
-- form_for [:admin, @league] do |f|
+%hr/
 
-  = f.label :name
-  = f.text_field :name
+= render :partial => 'form'
 
-  = f.label :owner_id
-  = f.select :owner_id, options_for_select(User.all.map{|x, y| [x.username, x.id]})
+.clear
 
-  = f.submit

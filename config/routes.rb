@@ -46,7 +46,10 @@ ProdeYetero::Application.routes.draw do
   end
 
   namespace :admin do
-    resources :leagues
+    resources :leagues do
+      resources :teams
+      resources :fixtures
+    end
   end
 
   root :to => "home#index"

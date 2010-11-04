@@ -1,0 +1,19 @@
+.container
+
+  - if @league.step == 'new'
+    = render :partial => 'league'
+
+  - elsif @league.step == 'teams'
+    = render :partial => 'teams'
+
+  - elsif @league.step == 'fixture'
+    = render :partial => 'fixture'
+
+  - else
+    Sorry, your league is in a inconsistent state, please contact with administrator
+    %p= "League Configuration Step: #{@league.step}"
+
+
+%div{:style=> "padding: 20px;"}
+  = link_to admin_leagues_path do 
+    <button class="red">Back to Leagues</button>

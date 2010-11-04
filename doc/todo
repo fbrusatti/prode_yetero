@@ -1,4 +1,4 @@
-Compass (with blueprint)and fancy buttons
+Compass (with blueprint) and fancy buttons
 
 /Gemfile (Add)
 gem "compass", ">= 0.10.2"
@@ -31,9 +31,8 @@ Add to layout files
   /[if IE]
     = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
 
-
-(Remember that blueprint into compass has a limited scope, so to use it 
-we have to scope the use of blueprint, for example:
-  %body.bp)
+Remember that blueprint into compass has a limited scope, so to use it we have 
+to scope the use of blueprint, for example,   %body.bp
 
 Restart the server
+

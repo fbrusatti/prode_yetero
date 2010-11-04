@@ -88,6 +88,14 @@ a {
   border-radius:         10px;
 }
 
+.even{
+  background-color: #eeeeee;
+}
+
+.odd{
+  background-color: #fff;
+}
+
 /* Customization of grid of Blueprint*/
 .container .head{
   color: green;
@@ -101,10 +109,14 @@ a {
   padding-top: 10px;
 }
 
-.even{
-  background-color: #eeeeee;
+.container .item a{
+  padding: 10px 50px 10px 10px;
+  border: 1px;
 }
-
-.odd{
-  background-color: #fff;
+.container .item a:hover{
+  color: #c60;
 }
+.container .item-line:hover{
+  background-color: #dfedf7;
+  color: #c60;
+} 

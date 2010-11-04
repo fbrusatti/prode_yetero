@@ -1,0 +1,38 @@
+- form_for [:admin, @league] do |f|
+  .column.span-12.append-8.prepend-2.last
+    .column.span-4
+      = f.label :name
+    .column.span-8.last
+      = f.text_field :name
+
+    .column.span-4
+      = f.label :owner_id
+    .column.span-8.last
+      = f.select :owner_id, options_for_select(User.all.map{|x, y| [x.username, x.id]})
+
+    .column.span-4
+      = f.label :state
+    .column.span-8.last
+      = f.select :state, options_for_select(['started', 'actived', 'playing', 'finsished'])
+
+    .column.span-12.prepend-4.last
+      %b Meanings of each state
+      %br
+
+      %b started: 
+      The league was created and you need to start to configure it.
+      %br/
+
+      %b active:
+      The league was configured and it is ready to start to play.
+      %br/
+
+      %b playing:
+      The first match of to this league has been started, so the whole league is playing (realize that to be in this status the league should be active before).
+      %br/
+
+      %b finished:
+      Game over, last match of this league finished and we are ready to declare a winner.
+
+    .column.span-8.preprend-4.append-12.last
+      = f.submit

@@ -2,6 +2,7 @@ class Week < ActiveRecord::Base
   belongs_to :fixture
 end
 
+
 # == Schema Information
 #
 # Table name: weeks
@@ -13,5 +14,7 @@ end
 #  to         :date
 #  created_at :datetime
 #  updated_at :datetime
+#  status     :string(255)
+#  step       :string(255)
 #
 

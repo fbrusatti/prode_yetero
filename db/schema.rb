@@ -10,10 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101030124618) do
+ActiveRecord::Schema.define(:version => 20101104172429) do
 
   create_table "fixtures", :force => true do |t|
     t.integer  "league_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "state"
+    t.string   "step"
+  end
+
+  create_table "league_teams", :force => true do |t|
+    t.integer  "league_id"
+    t.integer  "team_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -23,6 +32,8 @@ ActiveRecord::Schema.define(:version => 20101030124618) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "owner_id"
+    t.string   "state"
+    t.string   "step"
   end
 
   create_table "matches", :force => true do |t|
@@ -81,6 +92,8 @@ ActiveRecord::Schema.define(:version => 20101030124618) do
     t.date     "to"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "state"
+    t.string   "step"
   end
 
 end

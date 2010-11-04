@@ -1,25 +1,32 @@
 - title 'Leagues'
 
 %div{:class => 'container'}
+  .span-2
+    &nbsp;
   .span-6
     %h2.head= "Name"
   .span-6
     %h2.head= "Owner"
+  .span-6
+    %h2.head= "Status"
 
   %hr/
 
   - @leagues.each do |league|
-    %div{:class => cycle('even', 'odd')} 
+    .item-line{:class => cycle('even', 'odd')} 
+      .span-2{:style => 'text-align: center; padding-top: 15px;'}
+        = link_to image_tag('cross.png'), admin_league_path(league), :method => :delete, :confirm => 'Are you sure?'
+
       .span-6.item
-        = league
+        = link_to league, edit_admin_league_path(league)
 
       .span-6.item.last
-        = league.owner.username
+        = link_to league.owner.username, edit_admin_league_path(league)
 
       .clear
 
 %div{:style=> "padding: 20px;"}
-  = link_to new_admin_league_path, :method => :post do
+  = link_to new_admin_league_path do
     <button class="matte-blue">Create New League</button>
 
 

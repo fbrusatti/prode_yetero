@@ -7,6 +7,7 @@ class FixtureTest < ActiveSupport::TestCase
   end
 end
 
+
 # == Schema Information
 #
 # Table name: fixtures
@@ -15,5 +16,7 @@ end
 #  league_id  :integer(4)
 #  created_at :datetime
 #  updated_at :datetime
+#  status     :string(255)
+#  step       :string(255)
 #
 

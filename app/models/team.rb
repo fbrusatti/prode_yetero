@@ -1,5 +1,16 @@
 class Team < ActiveRecord::Base
+
+  # Associations ---------------------------------------------------------------
   has_many :matches
+
+  has_many :league_teams
+  has_many :leagues, :through => :league_teams
+  # ----------------------------------------------------------------------------
+
+  # Validations ----------------------------------------------------------------
+  validates_presence_of :name
+  # ----------------------------------------------------------------------------
+
 end
 
 # == Schema Information

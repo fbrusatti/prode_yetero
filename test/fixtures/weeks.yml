@@ -12,6 +12,7 @@ two:
   from: 2010-10-27
   to: 2010-10-27
 
+
 # == Schema Information
 #
 # Table name: weeks
@@ -23,5 +24,7 @@ two:
 #  to         :date
 #  created_at :datetime
 #  updated_at :datetime
+#  status     :string(255)
+#  step       :string(255)
 #
 

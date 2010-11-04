@@ -1,0 +1,15 @@
+%hr/
+
+%h2
+  - c = @league.current_step == 'new'? 'blue-add' : 'gray'
+  = link_to edit_admin_league_url(:step => 'new'), :class => c do 
+    <button class="#{c}">League</button>
+
+  - c = @league.current_step == 'teams'? 'blue-add' : 'gray'
+  = link_to edit_admin_league_url(:step => 'teams') do 
+    <button class="#{c}">Teams</button>
+
+  - c = @league.current_step == 'fixture'? 'blue-add' : 'gray'
+  = link_to edit_admin_league_url(:step => 'fixture') do
+    <button class="#{c}">Fixture</button>
+%hr/

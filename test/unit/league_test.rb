@@ -7,6 +7,7 @@ class LeagueTest < ActiveSupport::TestCase
   end
 end
 
+
 # == Schema Information
 #
 # Table name: leagues
@@ -15,5 +16,8 @@ end
 #  name       :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  owner_id   :integer(4)
+#  status     :string(255)
+#  step       :string(255)
 #
 
