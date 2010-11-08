@@ -1,17 +1,18 @@
 .container
 
-  - if @league.step == 'new'
+  - if @league.current_step == 'new'
     = render :partial => 'league'
 
-  - elsif @league.step == 'teams'
+  - elsif @league.current_step == 'teams'
     = render :partial => 'teams'
 
-  - elsif @league.step == 'fixture'
+  - elsif @league.current_step == 'fixture'
     = render :partial => 'fixture'
 
   - else
     Sorry, your league is in a inconsistent state, please contact with administrator
     %p= "League Configuration Step: #{@league.step}"
+    %p= "League State: #{@league.state}"
 
 
 %div{:style=> "padding: 20px;"}

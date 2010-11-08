@@ -23,11 +23,37 @@
       .span-6.item.last
         = link_to league.owner.username, edit_admin_league_path(league)
 
+      .span-6.item.last
+        = link_to league.state, edit_admin_league_path(league)
+
       .clear
 
 %div{:style=> "padding: 20px;"}
   = link_to new_admin_league_path do
     <button class="matte-blue">Create New League</button>
+
+%h2
+  Dialog
+%p
+  <a href="#" id="dialog_link" class="ui-state-default ui-corner-all">Open Dialog</a>
+
+#dialog.hide{:title => "Basic dialog"}
+  %p
+    This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.
+
+%script{:language => "javascript"}
+  // Dialog Link
+  function made_modal_dialog(){
+  $('#dialog_link').click(function(){
+  $('#dialog').dialog();
+  return false;
+  });
+  };
+
+  jQuery(document).ready(function(){
+  made_modal_dialog();
+  });
+
 
 
 /
@@ -57,4 +83,6 @@
     .span-12.last
       %p
         span-12 last
+
+
 

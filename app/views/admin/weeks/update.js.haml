@@ -1,0 +1,10 @@
+- if @updated
+  $("#week-conf").html("<span style=\"color: green;\">Week Successfully Updated...</span>").fadeOut(1600);
+  $("#week-conf").html("<div id=\"week-conf\"></div>");
+  $("#weeks").html("#{escape_javascript render :partial => 'admin/leagues/week_list'}");
+
+- else
+  $("#notice").html("<span style=\"color: red;\">Sorry, we can't save this week...</span>");
+  $(".notice").show();
+
+

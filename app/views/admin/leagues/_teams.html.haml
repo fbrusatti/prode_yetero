@@ -1,20 +1,21 @@
 %h5 Teams List
 
-- if @league.teams.empty?
-  Your league haven't teams loaded yet, please create them
+#teams
+  - if @league.teams.empty?
+    Your league haven't teams loaded yet, please create them
 
-- else
-  .container
-  - @league.teams.each do |team|
-    %span{:class => "ss_sprite ss_bullet_green"}
-      = team.name
-    %br
+  - else
+    .container
+      = render :partial => 'team_list'
 
-%br/
-%br/
+.clear
+%hr.space
+%hr.space
 
 %h5 Quick Team Creation
-- form_for [:admin, @league, Team.new] do |f|
+- form_for [:admin, @league, Team.new], :remote => true do |f|
+  = f.error_messages
+
   = f.label :name
   = f.text_field :name
 

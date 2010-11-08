@@ -48,7 +48,11 @@ ProdeYetero::Application.routes.draw do
   namespace :admin do
     resources :leagues do
       resources :teams
-      resources :fixtures
+      resources :fixtures do
+        resources :weeks do
+          resources :matches
+        end
+      end
     end
   end
 

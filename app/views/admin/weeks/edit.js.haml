@@ -1,0 +1,31 @@
+$("#week-conf").html("#{escape_javascript render :partial => 'admin/leagues/week_conf'}"); 
+$("#week-conf").show();
+
+
+$( "#edit-week-form" ).dialog({
+autoOpen: false,
+height: 300,
+width: 350,
+modal: true,
+buttons: {
+"Update a Week": function() {
+jQuery.ajax({ 
+type: "put",
+url: "/admin/leagues/#{@league.id}/fixtures/#{@fixture.id}/weeks/#{@week.id}",
+data: $("#edit_week_#{@week.id}").serialize(),
+});
+
+$( this ).dialog( "close" );
+},
+Cancel: function() {
+$( this ).dialog( "close" );
+}
+},
+close: function() {
+$("#edit-week-form").parent().remove();
+$("#edit-week-form").remove();
+}
+});
+
+$("#edit-week-form").dialog( "open" );
+

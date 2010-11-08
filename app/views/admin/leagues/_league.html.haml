@@ -1,6 +1,9 @@
 - form_for [:admin, @league] do |f|
   .column.span-12.append-8.prepend-2.last
     .column.span-4
+      = f.error_messages
+    .clear
+    .column.span-4
       = f.label :name
     .column.span-8.last
       = f.text_field :name

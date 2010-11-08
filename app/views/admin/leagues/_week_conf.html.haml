@@ -1,0 +1,14 @@
+- if @week
+  %h5= "Configuration of #{@week.name}"
+
+  .notice.hide
+    #notice
+
+  #edit-week-form{:title => "Editing #{@week.name}"}
+    - form_for [:admin, @league, @league.fixture, @week], :remote => true do |f|
+      %fieldset
+        = f.label :name
+        = f.text_field :name
+
+        = f.submit
+

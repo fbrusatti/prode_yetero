@@ -9,8 +9,15 @@ class Admin::TeamsController < Admin::BaseController
   def create
     if params[:league_id]
       @league = League.find(params[:league_id])
-      @league.teams << Team.new(params[:team])
-      redirect_to edit_admin_league_path @league
+      @team = Team.new(params[:team])
+      @team.leagues << @league
+
+      if @team.save
+        @save = true
+      else
+        @save = false
+      end
+    
 
     else
       Team.new(params[:team])

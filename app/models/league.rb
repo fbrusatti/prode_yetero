@@ -2,8 +2,8 @@ class League < ActiveRecord::Base
   include ActiveRecord::Transitions
 
   # Associations ---------------------------------------------------------------
-  has_one :fixture
-  has_one :standing
+  has_one :fixture, :dependent => :destroy
+  has_one :standing, :dependent => :destroy
 
   belongs_to :owner, :class_name => 'User'
 
@@ -15,6 +15,13 @@ class League < ActiveRecord::Base
   validates_presence_of :name
   # ----------------------------------------------------------------------------
 
+  # Callback's -----------------------------------------------------------------
+  after_create :initialize
+
+  def initialize
+    self.create_fixture
+  end
+  # ----------------------------------------------------------------------------
   def to_s
     name
   end

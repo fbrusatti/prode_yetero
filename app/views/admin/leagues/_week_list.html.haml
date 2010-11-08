@@ -1,0 +1,7 @@
+.column.span-12
+  - @league.fixture.weeks.each do |week|
+    .span-7
+    %span{:class => "ss_sprite ss_sport_soccer", :style => "width: 100px;"}
+      = link_to week.name, edit_admin_league_fixture_week_path(@league, @league.fixture, week), :remote => true
+    %br/
+

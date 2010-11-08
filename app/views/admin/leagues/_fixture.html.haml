@@ -1,1 +1,28 @@
-FIXTURE template
+%h5 Weeks
+
+- if @league.fixture.weeks.empty?
+  #weeks
+    Your league haven't teams loaded yet, please create them
+
+- else
+  .container
+    #weeks
+      = render :partial => 'week_list'
+
+    .column.span-10#week-conf
+
+.clear
+%hr.space
+%hr.space
+
+%button.button.blue-add#create-week
+  Create New Week
+
+#new-week-form{:title => "Create New User"}
+  - form_for [:admin, @league, @league.fixture, Week.new], :remote => true do |f|
+    = f.error_messages
+
+    = f.label :name
+    = f.text_field :name
+
+    = f.submit 'Create'

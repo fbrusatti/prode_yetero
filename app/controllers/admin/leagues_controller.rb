@@ -13,7 +13,7 @@ class Admin::LeaguesController < Admin::BaseController
   end
 
   def new
-    @league = League.new
+    @league = League.new(:step => 'new')
     respond_with @league
   end
 
@@ -30,7 +30,15 @@ class Admin::LeaguesController < Admin::BaseController
   def destroy
     @league = League.find(params[:id])
     @league.destroy
-    flash[:notice] = "Successfully destroyed league."
-    redirect_to admin_leagues_path, :notice => "Successfully deleted league."
+    redirect_to admin_leagues_path, :notice => "Successfully destroyed league."
+  end
+
+  def update
+    @league = League.find(params[:id])
+    if @league.update_attributes(params[:league])
+      redirect_to edit_admin_league_path(@league), :notice => "Succesfully updated league."
+    else
+      render :action => 'edit'
+    end
   end
 end
