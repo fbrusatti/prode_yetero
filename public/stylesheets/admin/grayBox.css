@@ -1,0 +1,55 @@
+.grayBox{
+  width: auto; 
+  float: left;
+  -moz-border-radius-bottomleft: 8px;  
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-radius-topleft: 8px; 
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;  
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-radius-topright: 8px; 
+  -webkit-border-top-right-radius: 8px;
+  background:#ccc none repeat scroll 0% 0%;
+  border: 2px solid black;
+  margin:0px 0.25em;
+  padding:2px 5px;
+  margin: 15px 8px 15px 8px;
+}
+
+.grayBox .title{
+  -moz-border-radius-bottomleft: 8px;  
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-radius-topleft: 8px; 
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;  
+  -webkit-border-bottom-right-radius: 8px;
+  -moz-border-radius-topright: 8px; 
+  -webkit-border-top-right-radius: 8px;
+  font: 14px Arial; 
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin:0px;"
+  border-bottom: 1px solid;
+  background-color: #1C1C1C;
+  padding: 5px;
+}
+
+.grayBox p{
+  font: 14px Arial;
+  font-weight: bold;
+  color: black;
+  margin-left: 50px;
+  padding: 5px;
+}
+.grayBox a{
+  text-decoration: none;
+}
+.grayBox a:hover{
+  text-decoration: none;
+  color:#DF7401;
+}
+
+.grayBox .item-label{
+  color: black;
+}

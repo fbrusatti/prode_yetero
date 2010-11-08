@@ -17,11 +17,17 @@ class Admin::WeeksController < Admin::BaseController
     end
   end
 
-  def edit
+  def destroy
+    @destroyed = @week.destroy
+  end
+
+
+  def edit 
   end
   
-  def show
+  def show 
   end
+
 
   def update
     @updated = @week.update_attributes(params[:week])

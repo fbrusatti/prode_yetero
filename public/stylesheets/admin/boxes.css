@@ -1,0 +1,119 @@
+.box {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border: 1px solid;
+  width: auto; height: auto;
+  padding: 5px;
+  font-size: .6em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: move;
+  float: left;
+  font: 12px/16px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; 
+  font-weight: bold;   	
+}
+  
+.med_box{
+	margin: 12px;
+  border: 1px solid;
+  width: auto; height: auto;
+  padding: 5px;
+  font-size: .6em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: move;
+  float: left;
+  font: 12px/16px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif; 
+  font-weight: bold;
+}
+
+
+.med_box a{
+  text-decoration: none;
+  color: #2E2E2E;
+}
+  
+.tiny_box {
+  margin: 10px;
+  border: 1px solid #ccc;
+  width: auto; height: auto;
+  padding: 2px;
+  font: 12px/16px "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+  color: blue; 
+  font-weight: bold; 
+}
+
+.box a { text-decoration: none; }
+.tiny_box a { text-decoration: none; color: red;}
+
+ul{ list-style-type: none; }
+ 
+.white{
+  border-color: #090;
+  background-color: white;
+  color: black;
+  float: left;
+  height: auto; }
+
+.white_tag{
+  background-color: #2DE6E6;
+  float: left;
+  height: auto; }
+  
+.white_classifier{
+  border-color: #090;
+  background-color: white;
+  float: left;
+  height: auto; }
+  
+.black{
+  border-color: #090;
+  background-color: black;
+  float: left;
+  color: white;
+  height: auto; }    
+
+.content-div{
+  top: 10px;
+  float: left;
+  width: 125px;
+  height: auto;
+  border-color: #090;
+  background-color: white; }
+  
+.white_green{
+  top: 10px;
+  float: left;
+  width: 180px;
+  height: auto;
+  border-color: #090;
+  background-color: white;}
+  
+.white_red{
+  top: 10px;
+  float: right;
+  width: 125px;
+  height: 180px;
+  border-color: red;
+  background-color: white;}
+  
+.hover {
+  border-width: 5px;
+  padding: 1px
+}
+.delete{
+  border: none;
+  float: right;
+  width: 80px; height: 100px;
+  display: block;
+  overflow: hidden;
+	background-image: url('../images/trash.png');
+	background-position: center center;
+	background-repeat: no-repeat; }
+	
+.hover-delete{ background-image: url('../images/trashfull.png'); }
+
+div#color_container{ background-color: blue; }
+

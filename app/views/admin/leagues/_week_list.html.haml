@@ -1,7 +1,14 @@
-.column.span-12
-  - @league.fixture.weeks.each do |week|
-    .span-7
-    %span{:class => "ss_sprite ss_sport_soccer", :style => "width: 100px;"}
-      = link_to week.name, edit_admin_league_fixture_week_path(@league, @league.fixture, week), :remote => true
-    %br/
+.column.span-18
+  - @league.fixture.weeks.each_with_index do |week, index|
+    %div
+      .grayBox
+        .title
+          = link_to week.name, edit_admin_league_fixture_week_path(@league, @league.fixture, week), :remote => true
+          &nbsp;&nbsp;&nbsp;
+          .ss_sprite.ss_cancel
+            = link_to "X", admin_league_fixture_week_path(@league, @league.fixture, week), :method => :delete, :confirm => 'are you sure?', :remote => true
+
+        - week.matches.each do |match|
+          = match.id
+        fin
 

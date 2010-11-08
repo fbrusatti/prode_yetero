@@ -10,5 +10,11 @@
         = f.label :name
         = f.text_field :name
 
-        = f.submit
+      %fieldset
+        %title
+          Match Builder
+        - @league.teams.each do |team|
+          .tiny_box.white
+            = team.name
+        =# f.submit
 

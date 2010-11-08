@@ -1,0 +1,7 @@
+- if @destroyed
+  $("#weeks").html("#{escape_javascript render :partial => 'admin/leagues/week_list'}");
+
+- else
+  $("#notice").html("<span style=\"color: red;\">Sorry, we can't destroy this week...</span>");
+  $(".notice").show();
+
