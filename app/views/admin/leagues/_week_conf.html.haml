@@ -10,35 +10,41 @@
         = f.label :name
         = f.text_field :name
 
+        .clear
         %b="Games"
+        .clear
+
         - @week.matches.each do |game|
+          = link_to "X", admin_league_fixture_week_match_path(@league, @fixture, @week, game), :method => 'delete', :confirm => 'are you sure?', :remote => true
           ="#{game.local.name} vs. #{game.visitor.name}"
+          %br/
 
+
+    %b="Match Builder"
+    %br/
+
+    - form_for [:admin, @league, @fixture, @week, Match.new], :remote => true do |f|
       %fieldset
-        %b="Match Builder"
-        %br/
+        .ui-widget-header.ui-droppable{:style=>"width:400px;"}
+          = f.hidden_field :local
+          #local_team
+            Local:
 
-        -# form_for [:admin, @league, @league.fixture, @week, Match.new], :remote => true do |f|
-        - form_for [:admin, @league, @fixture, @week, Match.new], :remote => true do |f|
-          .ui-widget-header.ui-droppable{:style=>"width:400px;"}
-            = f.hidden_field :local
-            #local_team
-              Local:
+        vs.
 
-          vs.
+        .ui-widget-header.ui-droppable{:style=>"width:400px;"}
+          = f.hidden_field :visitor
+          #visitor_team
+            Vistitor:
 
-          .ui-widget-header.ui-droppable{:style=>"width:400px;"}
-            = f.hidden_field :visitor
-            #visitor_team
-              Vistitor:
+        = f.submit
 
-          = f.submit
-        %br/
-
+    %fieldset
       %b="Teams"
       %br/
       - @league.teams.each do |team|
         .tiny_box.white
           = link_to team.name, "#", {:id => "#{team.id}"}
+
 
     = javascript_include_tag 'admin/matches'

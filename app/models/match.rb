@@ -1,8 +1,8 @@
 class Match < ActiveRecord::Base
   belongs_to :week
 
-  has_one :visitor, :class_name => "Team", :foreign_key => "visitor_id"
-  has_one :local, :class_name => "Team", :foreign_key => "local_id"
+  belongs_to :visitor, :class_name => "Team", :foreign_key => "visitor_id"
+  belongs_to :local, :class_name => "Team", :foreign_key => "local_id"
 end
 
 # == Schema Information

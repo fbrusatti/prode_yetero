@@ -5,8 +5,7 @@
         .title
           = link_to week.name, edit_admin_league_fixture_week_path(@league, @league.fixture, week), :remote => true
           &nbsp;&nbsp;&nbsp;
-          .ss_sprite.ss_cancel
-            = link_to "X", admin_league_fixture_week_path(@league, @league.fixture, week), :method => :delete, :confirm => 'are you sure?', :remote => true
+          = link_to image_tag('cross.png'), admin_league_fixture_week_path(@league, @league.fixture, week), :method => :delete, :confirm => 'are you sure?', :remote => true
 
         - week.matches.each do |match|
           = match.id
