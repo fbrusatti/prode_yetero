@@ -68,3 +68,9 @@ $(function() {
 				$( "#new-week-form" ).dialog( "open" );
 			});
 	});
+
+// $j(document).ready(function() {
+//      $j('.cartitembox:even').css({'background-color': '#dddddd', 'color': '#666666'});
+//    });
+
+

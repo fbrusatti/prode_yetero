@@ -10,11 +10,35 @@
         = f.label :name
         = f.text_field :name
 
-      %fieldset
-        %title
-          Match Builder
-        - @league.teams.each do |team|
-          .tiny_box.white
-            = team.name
-        =# f.submit
+        %b="Games"
+        - @week.matches.each do |game|
+          ="#{game.local.name} vs. #{game.visitor.name}"
 
+      %fieldset
+        %b="Match Builder"
+        %br/
+
+        -# form_for [:admin, @league, @league.fixture, @week, Match.new], :remote => true do |f|
+        - form_for [:admin, @league, @fixture, @week, Match.new], :remote => true do |f|
+          .ui-widget-header.ui-droppable{:style=>"width:400px;"}
+            = f.hidden_field :local
+            #local_team
+              Local:
+
+          vs.
+
+          .ui-widget-header.ui-droppable{:style=>"width:400px;"}
+            = f.hidden_field :visitor
+            #visitor_team
+              Vistitor:
+
+          = f.submit
+        %br/
+
+      %b="Teams"
+      %br/
+      - @league.teams.each do |team|
+        .tiny_box.white
+          = link_to team.name, "#", {:id => "#{team.id}"}
+
+    = javascript_include_tag 'admin/matches'

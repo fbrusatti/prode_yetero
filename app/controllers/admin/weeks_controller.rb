@@ -24,7 +24,7 @@ class Admin::WeeksController < Admin::BaseController
 
   def edit 
   end
-  
+ 
   def show 
   end
 
