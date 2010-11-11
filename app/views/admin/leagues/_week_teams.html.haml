@@ -1,0 +1,44 @@
+
+- @teams = @league.teams - @week.challenged_teams
+- if @teams
+  - @teams.each do |team|
+    %div{:class => "tiny_box white", :id => "team_#{team.id}"}
+      = link_to team.name, "#", {:id => "#{team.id}"}
+
+:javascript
+  console.clear();
+  $(".tiny_box a[href]").click(function(){
+    // set the id into hidden field and update view with the team name
+    if (!$("#match_local").attr("value")){
+      // Hide selected team
+      $(this).parent().hide();
+
+      // set the id of the selected team and add it visualy with its del icon
+      $("#match_local").attr("value", this.id);    
+      $("#local_team").html("<a href=\"#\" class=\"local_del_icon\"><img src=\"/images/cross.png\" alt=\"Cross\">&nbsp;&nbsp;</a>");
+      $("#local_team").append(this.innerHTML);
+      $(".local_del_icon").attr("id", this.id);
+
+      // Add behavior to remove a selected local team
+      $(".local_del_icon").click(function(){
+        $("#local_team").html("Local:");
+        $("#team_" + this.id).show();
+        $("#match_local").removeAttr("value");
+      });
+
+    } else if (!$("#match_visitor").attr("value")){
+      $(this).parent().hide();
+
+      $("#match_visitor").attr("value", this.id);
+      $("#visitor_team").html("<a href=\"#\" class=\"visitor_del_icon\"><img src=\"/images/cross.png\" alt=\"Cross\">&nbsp;&nbsp;</a>");
+      $("#visitor_team").append(this.innerHTML);
+      $(".visitor_del_icon").attr("id", this.id);
+
+      // Add behavior to remove a selected visitor team
+      $(".visitor_del_icon").click(function(){
+        $("#visitor_team").html("Visitor:");
+        $("#team_" + this.id).show();
+        $("#match_visitor").removeAttr("value");
+      });
+    }
+  });

@@ -13,12 +13,8 @@
         .clear
         %b="Games"
         .clear
-
-        - @week.matches.each do |game|
-          = link_to "X", admin_league_fixture_week_match_path(@league, @fixture, @week, game), :method => 'delete', :confirm => 'are you sure?', :remote => true
-          ="#{game.local.name} vs. #{game.visitor.name}"
-          %br/
-
+        #week_games
+          = render :partial => 'admin/leagues/week_games'
 
     %b="Match Builder"
     %br/
@@ -42,9 +38,6 @@
     %fieldset
       %b="Teams"
       %br/
-      - @league.teams.each do |team|
-        .tiny_box.white
-          = link_to team.name, "#", {:id => "#{team.id}"}
-
-
+      #week_teams
+        = render :partial => 'admin/leagues/week_teams'
     = javascript_include_tag 'admin/matches'

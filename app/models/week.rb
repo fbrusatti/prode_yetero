@@ -9,6 +9,15 @@ class Week < ActiveRecord::Base
   # Validations ----------------------------------------------------------------
   validates_presence_of :name
   # ----------------------------------------------------------------------------
+
+
+  def challenged_teams
+    teams = []
+    matches.each do |game|
+      teams << game.local << game.visitor
+    end
+    teams
+  end
 end
 
 

@@ -16,6 +16,12 @@ class Admin::MatchesController < Admin::BaseController
 
   def destroy
     @match = Match.find(params[:id])
+    @local = @match.local
+    @visitor = @match.visitor
+    @week = @match.week
+    @fixture = @week.fixture
+    @league = @fixture.league
+
     @destroyed = @match.destroy
   end
 

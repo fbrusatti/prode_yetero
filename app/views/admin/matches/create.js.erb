@@ -1,7 +1,15 @@
-alert(@saved);
-if @saved
-  alert("create...");  
-else
-  alert("No create...");  
-end
+<% if @saved %>
+  $('#week_teams').html("<%= escape_javascript render :partial => 'admin/leagues/week_teams' %>");
+  $('#week_games').html("<%= escape_javascript render :partial => 'admin/leagues/week_games' %>");
+
+  $("#local_team").html("Local:");
+  $("#visitor_team").html("Visitor:");
+
+  $("#match_local").removeAttr("value");
+  $("#match_visitor").removeAttr("value");
+
+<% else %>
+
+  alert("Sorry, we can't save this match");  
+<% end %>
 

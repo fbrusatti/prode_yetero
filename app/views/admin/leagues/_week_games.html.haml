@@ -1,0 +1,4 @@
+- @week.matches.each do |game|
+  = link_to image_tag('cross.png'), admin_league_fixture_week_match_path(@league, @fixture, @week, game), :method => 'delete', :confirm => 'are you sure?', :remote => true
+  ="#{game.local.name} vs. #{game.visitor.name}"
+  %br/

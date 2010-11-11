@@ -1,1 +1,8 @@
-alert('deleted');
+<% if @destroyed %>
+  $('#week_teams').html("<%= escape_javascript render :partial => 'admin/leagues/week_teams' %>");
+  $('#week_games').html("<%= escape_javascript render :partial => 'admin/leagues/week_games' %>");
+
+<% else %>
+
+  alert("Sorry, we can't delete this match");  
+<% end %>
